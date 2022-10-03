@@ -3,7 +3,6 @@ from time import sleep
 import chime
 from plyer import notification
 import csv
-# # from time import strftime, gmtime
 
 
 def alarm_sound() -> None:
