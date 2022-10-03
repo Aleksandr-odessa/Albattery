@@ -30,8 +30,6 @@ def battery() -> None:
     if not battery[2]:
         battery = sensors_battery()[0]
         if 30 < battery < 50:
-            # print(strftime("%H:%M:%S", gmtime()))
-            # print(f' timer one = ', battery)
             sleep(60 * 2)
             battery = sensors_battery()[0]
             while battery > 22:
