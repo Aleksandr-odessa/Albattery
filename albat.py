@@ -2,7 +2,6 @@ from psutil import sensors_battery
 from time import sleep
 import chime
 from plyer import notification
-import csv
 
 
 def alarm_sound() -> None:
@@ -16,15 +15,8 @@ def alarm_view() -> None:
         message="акамулятор разряжен",
         timeout=20
     )
-
-
-def read_csv() -> None:
-    with open("customiz.csv", encoding="utf-8") as file:
-        file_rider = csv.reader(file, delimiter=";")
-        for row in file_rider:
-            print(row)
-
-
+    
+    
 def battery() -> None:
     battery: tuple = sensors_battery()
     if not battery[2]:
